@@ -4,22 +4,24 @@ import java.util.Scanner;
 
 public class cMain {
 
+	private static Scanner scan1;
+
 	public static void main(String[] args) {
-		Scanner scan1 = new Scanner(System.in);
+		scan1 = new Scanner(System.in);
 		System.out.println("Please input number of Passing Attempts: ");
-		int att = scan1.nextInt();
+		double att = scan1.nextDouble();
 
 		System.out.println("Please input number of Pass Completions: ");
-		int comp = scan1.nextInt();
+		double comp = scan1.nextDouble();
 
 		System.out.println("Please input Total Passing Yards: ");
-		int yards = scan1.nextInt();
+		double yards = scan1.nextDouble();
 
 		System.out.println("Please input number of Touchdown Passes: ");
-		int td = scan1.nextInt();
+		double td = scan1.nextDouble();
 
 		System.out.println("Please input number of Interceptions: ");
-		int intc = scan1.nextInt();
+		double intc = scan1.nextDouble();
 
 		double a = ((comp / att) - 0.3) * 5;
 		double b = ((yards / att) - 3) * 0.25;
@@ -53,11 +55,6 @@ public class cMain {
 			d = 0;
 		} else {
 		}
-		
-		System.out.println(a);
-		System.out.println(b);
-		System.out.println(c);
-		System.out.println(d);
 
 		double rating = ((a + b + c + d) / 6) * 100;
 		System.out.println("Passer Rating: " + rating);
